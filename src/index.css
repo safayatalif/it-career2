@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container {
+    @apply flex justify-between items-center px-2 md:px-8 py-2 md:py-6 rounded-md shadow-sm bg-violet-100
+}
+
+.my-btn {
+    @apply btn bg-gradient-to-r from-violet-600 to-indigo-500 rounded-md
+}
