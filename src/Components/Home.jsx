@@ -4,6 +4,7 @@ import HomeCategorySection from './HomeCategorySection';
 import HomeFeaturedSection from './HomeFeaturedSection';
 
 const Home = () => {
+    
     return (
         <div>
             <HomeHeaderSection></HomeHeaderSection>
