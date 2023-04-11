@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Bars3Icon } from '@heroicons/react/24/solid'
+
 
 const Header = () => {
     return (
@@ -12,7 +14,7 @@ const Header = () => {
                 <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-400 font-medium' : '')} to="/blog">Blog</NavLink></li>
             </ul>
             <div className="dropdown dropdown-hover md:hidden">
-                <label tabIndex={0} className="font-bold text-4xl">...</label>
+                <label tabIndex={0} className="font-bold text-4xl"><Bars3Icon className='h-6 w-6 inline-block'></Bars3Icon></label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-auto">
                     <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-400 font-medium' : '')} to="/">Home</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-400 font-medium' : '')} to="/blog">Blog</NavLink></li>
