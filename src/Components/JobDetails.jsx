@@ -1,13 +1,14 @@
 import React from 'react';
-import { BeakerIcon , EnvelopeIcon , PhoneIcon , BriefcaseIcon, CurrencyDollarIcon , MapPinIcon} from '@heroicons/react/24/solid'
+import {EnvelopeIcon , PhoneIcon , BriefcaseIcon, CurrencyDollarIcon , MapPinIcon} from '@heroicons/react/24/solid'
 
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from './Utilities/fakeDb';
 
 const JobDetails = () => {
     const { jobId } = useParams();
     const jobsAll = useLoaderData();
     const jobData = jobsAll.find(job => job.id === jobId);
-    const { job_description, job_responsibility, educational_requirements, experiences, phone, salary, email, location, job_title } = jobData
+    const { job_description, job_responsibility, educational_requirements, experiences, phone, salary, email, location, job_title , id} = jobData
     return (
         <>
             <div className='text-center text-4xl font-bold bg-violet-100 py-12'>
@@ -37,7 +38,7 @@ const JobDetails = () => {
                 </div>
             </div>
             <div className='text-center md:text-right'>
-                <button className='my-btn md:w-1/4 mx-20'><Link >Apply Now</Link></button>
+                <button onClick={()=>addToDb(id)} className='my-btn md:w-1/4 mx-20'><Link >Apply Now</Link></button>
             </div>
         </>
     );

@@ -12,33 +12,35 @@ import ErrorPage from "./Components/ErrorPage";
 import Home from "./Components/Home";
 import JobDetails from "./Components/JobDetails";
 import Statistics from "./Components/Statistics";
+import AppliedJobsLoader from "./Components/Utilities/AppliedJobsLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/details/:jobId',
-        element:<JobDetails></JobDetails>,
-        loader:()=>fetch('/jobs.json')
+        path: '/details/:jobId',
+        element: <JobDetails></JobDetails>,
+        loader: () => fetch('/jobs.json')
       },
       {
-        path:'statistics',
-        element:<Statistics></Statistics>
+        path: 'statistics',
+        element: <Statistics></Statistics>
       },
       {
-        path:'applied',
-        element:<AppliedJobs></AppliedJobs>
+        path: 'applied',
+        element: <AppliedJobs></AppliedJobs>,
+        loader: AppliedJobsLoader
       },
       {
-        path:'blog',
-        element:<Blog></Blog>
+        path: 'blog',
+        element: <Blog></Blog>
       },
     ]
   },
