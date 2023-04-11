@@ -10,7 +10,6 @@ const ErrorPage = () => {
         <div>
             <div className='w-4/5 mx-auto'>
                 <Lottie className='h-[calc(100vh-200px)]' animationData={errorPage} loop={true} />
-
             </div>
             <div className='max-w-md text-center mx-auto'>
                 <h2 className='mb-8 font-extrabold text-3xl text-yellow-500'>

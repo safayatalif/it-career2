@@ -5,7 +5,6 @@
 .my-container {
     @apply flex justify-between items-center px-2 md:px-8 py-2 md:py-6 rounded-md shadow-sm bg-violet-100
 }
-
 .my-btn {
     @apply text-white px-2 py-1 bg-gradient-to-r from-violet-600 to-indigo-500 rounded-md hover:text-lime-400
 }

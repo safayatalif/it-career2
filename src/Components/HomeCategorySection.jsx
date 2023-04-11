@@ -5,7 +5,7 @@ const HomeCategorySection = () => {
     const [category, setCategory] = useState([]);
     useEffect(() => {
         const loaderData = async () => {
-            const res = await fetch('category.json');
+            const res = await fetch('/category.json');
             const data = await res.json();
             setCategory(data)
         }

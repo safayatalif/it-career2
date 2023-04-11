@@ -6,11 +6,11 @@ import HomeFeaturedSection from './HomeFeaturedSection';
 const Home = () => {
     
     return (
-        <div>
+        <>
             <HomeHeaderSection></HomeHeaderSection>
             <HomeCategorySection></HomeCategorySection>
             <HomeFeaturedSection></HomeFeaturedSection>
-        </div>
+        </>
     );
 };
 

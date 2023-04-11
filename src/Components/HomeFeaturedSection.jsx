@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Featured from './Featured';
 const HomeFeaturedSection = () => {
     const [jobs, setJobs] = useState([]);
-    const [showAll, setShowAll] = useState(false)
+    const [showAll, setShowAll] = useState(true)
     useEffect(() => {
         const loaderJobs = async () => {
             const res = await fetch('jobs.json');
@@ -30,7 +30,6 @@ const HomeFeaturedSection = () => {
                             <button onClick={() => setShowAll(!showAll)} className='my-btn'>See All Jobs</button>
                         </div>
                     </>
-
                 ) : (
                     <>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mx-3 md:mx-12'>
