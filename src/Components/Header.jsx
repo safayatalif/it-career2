@@ -22,7 +22,7 @@ const Header = () => {
                     <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-400 font-medium' : '')} to="/statistics">Statistics</NavLink></li>
                 </ul>
             </div>
-            <Link to="/applied" className='my-btn'>Star Applying</Link>
+            <Link to="/" className='my-btn'>Star Applying</Link>
         </nav>
     );
 };
