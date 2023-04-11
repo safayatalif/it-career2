@@ -1,13 +1,12 @@
-// use local storage to manage cart data
 const addToDb = id => {
     let appliedJob = getAppliedJob();
-    // add quantity
     const quantity = appliedJob[id];
     if (!quantity) {
         appliedJob[id] = 1;
+        alert("Got Jobs!! Applied")
     }
     else {
-       alert("already applied")
+       alert("Oh No!! Already Applied")
     }
     localStorage.setItem('applied-job', JSON.stringify(appliedJob));
 }

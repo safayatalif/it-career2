@@ -12,35 +12,35 @@ import {
 const data = [
     {
         name: "A1",
-        uv: 57
+        mark: 57
     },
     {
         name: "A2",
-        uv: 60
+        mark: 60
     },
     {
         name: "A3",
-        uv: 60
+        mark: 60
     },
     {
         name: "A4",
-        uv: 60
+        mark: 60
     },
     {
         name: "A5",
-        uv: 60
+        mark: 60
     },
     {
         name: "A6",
-        uv: 60
+        mark: 60
     },
     {
         name: "A7",
-        uv: 60
+        mark: 60
     },
     {
         name: "A8",
-        uv: 60
+        mark: 60
     }
 ];
 
@@ -51,7 +51,7 @@ const Statistics = () => {
                 <h1 className=''>My Assignment Marks</h1>
             </div>
             <div className='mx-auto md:w-2/3 mt-8'>
-                <ResponsiveContainer width='100%' height={200}>
+                <ResponsiveContainer width='100%' height={300}>
                     <AreaChart
 
                         data={data}
@@ -67,7 +67,7 @@ const Statistics = () => {
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                        <Area type="monotone" dataKey="mark" stroke="green" fill="#EDE9FE" />
                     </AreaChart>
                 </ResponsiveContainer>
             <h1 className='mt-8 text-center'><span className='font-semibold'>Fig:</span> Rechart</h1>

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Featured from './Featured';
-import { useLoaderData } from 'react-router-dom';
-
 const HomeFeaturedSection = () => {
     const [jobs, setJobs] = useState([]);
     const [showAll, setShowAll] = useState(false)
@@ -20,7 +18,7 @@ const HomeFeaturedSection = () => {
             {
                 showAll ? (
                     <>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mx-12'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-5  mx-3 md:mx-12'>
                             {
                                 jobs.slice(0, 4).map(job => <Featured
                                     job={job}
@@ -35,7 +33,7 @@ const HomeFeaturedSection = () => {
 
                 ) : (
                     <>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mx-12'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mx-3 md:mx-12'>
                             {
                                 jobs.map(job => <Featured
                                     job={job}
