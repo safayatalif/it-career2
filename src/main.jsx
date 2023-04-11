@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Statistics from "./Components/Statistics";
 import AppliedJobs from "./Components/AppliedJobs";
 import Blog from "./Components/Blog";
 import ErrorPage from "./Components/ErrorPage";
 import Home from "./Components/Home";
 import JobDetails from "./Components/JobDetails";
+import Statistics from "./Components/Statistics";
 
 const router = createBrowserRouter([
   {
