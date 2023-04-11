@@ -3,10 +3,10 @@ const addToDb = id => {
     const quantity = appliedJob[id];
     if (!quantity) {
         appliedJob[id] = 1;
-        alert("Got Jobs!! Applied")
+        alert("Got Jobs!! Job Applied")
     }
     else {
-       alert("Oh No!! Already Applied")
+       alert("You Forgot!! Already Applied")
     }
     localStorage.setItem('applied-job', JSON.stringify(appliedJob));
 }
